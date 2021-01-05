@@ -33,11 +33,12 @@ print('Accuracy: \n', accuracy_score(y_test,svm_predicted))
 
 
  
-# Creating logistic regression object
+#Import Libraries
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
 logreg = LogisticRegression()
-# Train the model using the training sets and check score
 logreg.fit(X_train, y_train)
-#Predict Output
 log_predicted= logreg.predict(X_test)
 
 logreg_score = round(logreg.score(X_train, y_train) * 100, 2)
