@@ -31,3 +31,18 @@ print('SVM Training Score: \n', svc_score_train)
 print('SVM Test Score: \n', svc_score_test)
 print('Accuracy: \n', accuracy_score(y_test,svm_predicted))
 
+
+ 
+# Creating logistic regression object
+logreg = LogisticRegression()
+# Train the model using the training sets and check score
+logreg.fit(X_train, y_train)
+#Predict Output
+log_predicted= logreg.predict(X_test)
+
+logreg_score = round(logreg.score(X_train, y_train) * 100, 2)
+logreg_score_test = round(logreg.score(X_test, y_test) * 100, 2)
+#Equation coefficient and Intercept
+print('Logistic Regression Training Score: \n', logreg_score)
+print('Logistic Regression Test Score: \n', logreg_score_test)
+
