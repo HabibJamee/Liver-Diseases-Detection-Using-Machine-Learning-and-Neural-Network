@@ -4,8 +4,6 @@ from sklearn.metrics import accuracy_score
 
 
 #Random Forest
-
-
 random_forest = RandomForestClassifier(n_estimators=100)
 random_forest.fit(X_train, y_train)
 rf_predicted = random_forest.predict(X_test)
@@ -17,10 +15,9 @@ print('Random Forest Test Score: \n', random_forest_score_test)
 print('Accuracy: \n', accuracy_score(y_test,rf_predicted))
 
 
-#Svm
-
-
+#Import Libraries
 from sklearn.svm import SVC
+#SVM
 svclassifier = SVC(kernel='linear')
 svclassifier.fit(X_train, y_train)
 svm_predicted = svclassifier.predict(X_test)
